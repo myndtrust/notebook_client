@@ -1,0 +1,20 @@
+.main-content {
+    width: 100%; /* Ensure full width */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+/* app.component.css */
+mat-sidenav {
+  width: 250px;  /* Adjust the width as needed */
+}
+
+mat-sidenav-container {
+  height: 100vh;  /* Ensure the container takes full height */
+}
+
+mat-sidenav-content {
+  margin-top: 10%; /* Optional: add padding to the content for better visual spacing */
+  padding: 16px; /* Optional: add padding to the content for better visual spacing */
+}
+

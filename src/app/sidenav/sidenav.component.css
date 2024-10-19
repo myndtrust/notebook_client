@@ -1,0 +1,12 @@
+
+.projects-list {
+    margin-top: 30%;
+    padding: 16px;
+    overflow-y: auto; /* Allow scrolling if the list is long */
+    color: white
+  }
+  
+
+  .projects-list h2 {
+    color: white
+  }

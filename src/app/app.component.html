@@ -1,0 +1,18 @@
+<!-- Header with event emitter -->
+<app-header (openedChange)="toggleSidenav($event)"></app-header>
+
+<mat-sidenav-container>
+
+  <!-- Sidenav -->
+  <mat-sidenav mode="over" [(opened)]="opened" (openedChange)="onOpenedChange($event)">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <!-- Main Content -->
+  <mat-sidenav-content>
+    <app-notebook></app-notebook>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+<app-footer> </app-footer>
