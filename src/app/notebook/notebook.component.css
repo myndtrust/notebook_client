@@ -1,79 +1,77 @@
-/* General Container Styles */
+/* Container Style */
 .container {
-    max-width: 1000px; /* Increased to utilize more of the screen */
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 40px;  /* Increased spacing between sections */
+    gap: 20px;
 }
 
-/* Card Styles */
+/* General Card Styles */
 mat-card {
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ensure cards stretch to full width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Interaction Section */
-.interaction-card {
-    flex-grow: 1; /* Expand interaction section to take up more space */
-    min-height: 200px; /* Minimum height to make it more prominent */
-}
-
-/* Input Field Styles */
-.input-field {
+/* Interaction Card Specifics */
+.interaction-card .input-field {
     width: 100%;
-    margin: 20px 0;  /* Space around the input field */
-    display: block;
+    margin-bottom: 10px;
 }
 
-/* Adjusting input for full text */
-mat-form-field input {
-    min-height: 50px; /* Increase the height to show more text */
-    font-size: 16px;  /* Larger font for better readability */
-    padding: 10px;    /* Padding inside the input for more comfort */
+.interaction-card button {
+    width: auto;  /* Adjust based on your design */
 }
 
-/* Button Styles */
-button {
-    display: block;
-    margin-top: 10px;
+/* Response Card Styles */
+.response-card h2, .history-card h2 {
+    margin-bottom: 10px;
+    color: #333;
 }
 
-/* Response Section */
-.response-card {
-    background-color: #f8f9fa;  /* Light gray background for differentiation */
-    padding: 20px;
-    min-height: 150px; /* Ensure the response area has some size */
-    color: black;
+.response-card p {
+    color: #666;
 }
 
-/* History Section */
+/* History Card Specifics */
 .history-card {
-    max-height: 400px; /* Increased height to display more history */
-    overflow-y: auto;  /* Allows scrolling for long histories */
-    padding: 20px;
-}
-
-/* List Item Styles for History */
-mat-list-item {
-    margin-bottom: 20px;  /* Space between history items */
+    border-bottom: 1px solid #eee;
     padding-bottom: 10px;
-    border-bottom: 1px solid #e0e0e0;  /* Separator between interactions */
+    background-color:#666;
 }
 
-/* List Items in History */
-.history-card mat-list-item  {
-    word-wrap: break-word; /* Break long words to fit into the card */
-  
+
+/* History Card Specifics */
+.history-card mat-list-item mat-list {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+   
 }
 
-.response-card h2 {
-    color: black
+.history-card mat-divider {
+    margin-bottom: 10px;
+    color:#666
 }
 
-.history-card h2 {
-    color: white
+
+mat-card h2, mat-card p, mat-list-item  {
+    color: white; /* Dark grey for text for good contrast on a light background */
 }
+
+mat-card button {
+    color: #ffffff; /* White text for buttons, adjust as necessary */
+    background-color: #007bff; /* Example button color, choose as per your design */
+}
+
+/* Makes Material cards lighter with lighter background and text colors */
+mat-card {
+    background-color: #ffffff; /* White background for light theme */
+    color: white; /* Darker text for better readability */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+
+
+

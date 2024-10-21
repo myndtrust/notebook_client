@@ -1,45 +1,31 @@
 <div class="container">
-    <!-- Header -->
-  
-<!-- Interaction Section -->
-<mat-card class="interaction-card">
-   
-    <mat-form-field class="input-field" >
-      <input 
-        matInput 
-        [(ngModel)]="userInput" 
-        placeholder="Type your prompt here" 
-      />
+  <!-- Interaction Section -->
+  <mat-card class="interaction-card">
+    <mat-form-field class="input-field">
+      <input matInput [(ngModel)]="userInput" placeholder="Type your prompt here"/>
     </mat-form-field>
-  
-    <button 
-    mat-raised-button 
-    color="primary" 
-    (click)="sendPrompt()">
-    Submit
-  </button>
-  
+    <button mat-raised-button color="primary" (click)="sendPrompt()">Submit</button>
   </mat-card>
   
+  <!-- Response Section -->
+  <mat-card class="response-card">
+    <h2>Model Response</h2>
+    <div *ngIf="response">
+      <p>{{ response }}</p>
+    </div>
+  </mat-card>
   
-    <!-- Response Section -->
-    <mat-card class="response-card">
-      <h2>Model Response</h2>
-      <div *ngIf="response">
-        <p>{{ response }}</p>
-      </div>
-    </mat-card>
-  
-    <!-- History Section -->
-    <mat-card class="history-card">
-      <h2>Interaction History</h2>
-      <mat-divider></mat-divider>
-      <mat-list>
-        <mat-list-item *ngFor="let interaction of interactionHistory">
-          <strong>Prompt:</strong> {{ interaction.prompt }}<br />
-          <strong>Response:</strong> {{ interaction.response }}
-        </mat-list-item>
-      </mat-list>
-    </mat-card>
-  </div>
+  <!-- History Section -->
+  <mat-card class="history-card">
+    <h2>Interaction History</h2>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item *ngFor="let interaction of interactionHistory">
+        <strong>Prompt:</strong> {{ interaction.prompt }}<br/>
+        <strong>Response:</strong> {{ interaction.response }}
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+</div>
+
   

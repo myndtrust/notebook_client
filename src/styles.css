@@ -3,6 +3,24 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+mat-sidenav-container {
+  background-color: orange; /* Set to white or any light color */
+}
+
+mat-sidenav {
+  background-color: green; /* Light grey for the sidebar */
+}
+
+mat-sidenav-content {
+  background-color: lightcyan; /* Ensures the content area is light */
+}
 
 
 /* Header */

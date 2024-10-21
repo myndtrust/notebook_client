@@ -24,6 +24,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { FormsModule } from '@angular/forms';
 
+import { NotebookListComponent } from './notebook-list/notebook-list.component'
 import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -34,6 +35,7 @@ import { ProfileDialogComponent } from './profile-dialog/profile-dialog.componen
   declarations: [
     AppComponent,
     NotebookComponent,
+    NotebookListComponent,
     HeaderComponent,
     FileUploadComponent,
     FooterComponent,
