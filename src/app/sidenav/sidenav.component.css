@@ -1,6 +1,12 @@
 
+h1 {
+  color: #00aaff;
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .projects-list {
-    margin-top: 30%;
+    margin-top: 15%;
     padding: 16px;
     overflow-y: auto; /* Allow scrolling if the list is long */
     color: white

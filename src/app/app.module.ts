@@ -23,6 +23,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { NotebookListComponent } from './notebook-list/notebook-list.component'
 import { HttpClient } from '@angular/common/http';
@@ -56,6 +57,7 @@ import { ProfileDialogComponent } from './profile-dialog/profile-dialog.componen
     MatIconModule,
     MatSidenavModule,
     FormsModule,
+    ReactiveFormsModule,
     MatSlideToggleModule,
     HttpClientModule
   ],

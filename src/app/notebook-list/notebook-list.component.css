@@ -1,17 +1,67 @@
-css
-Copy code
-/* Base style for all UL elements */
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+/* notebook-list.component.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
 }
 
-/* Specific styles for nested UL elements */
-ul.outer-ul {
-  background-color: #f9f9f9; /* Light grey background for the outer UL */
+.notebooks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Reduce the gap between cards */
 }
 
-ul.outer-ul li ul {
-  background-color: #e0e0e0; /* Slightly darker shade for nested UL */
+.notebook-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0px; /* Reduce padding inside the card */
+  transition: transform 0.2s; /* Add a subtle hover effect */
+}
+
+.notebook-card:hover {
+  transform: scale(1.08); /* Slightly enlarge the card on hover */
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-end; /* Align items to the bottom */
+  justify-content: space-between;
+}
+
+.action-icons {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end; /* Align icons to the bottom */
+}
+
+.action-icons button {
+  transition: transform 0.2s;
+}
+
+.action-icons button:hover mat-icon {
+  color: #007bff; /* Change icon color on hover */
+}
+
+.action-icons button:hover .edit-icon {
+  display: none;
+}
+
+.action-icons button:hover .edit-icon-hover {
+  display: inline;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 8px; /* Reduce margin to make it more compact */
+}
+
+.create-notebook-form {
+  margin-top: 20px;
+}
+
+.form-actions {
+  margin-top: 8px;
+  text-align: right;
 }

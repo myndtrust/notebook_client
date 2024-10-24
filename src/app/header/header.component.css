@@ -4,4 +4,10 @@
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensure it stays above other content */
+    
+  }
+
+  div {
+    color: #00aaff;
+    font-family: 'Courier New', Courier, monospace; 
   }
