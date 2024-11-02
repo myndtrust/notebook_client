@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthModule } from '@auth0/auth0-angular';
 import { NotebookComponent } from './notebook/notebook.component';
 import { HeaderComponent } from './header/header.component';
 import { FileUploadComponent } from './file-upload/file-upload.component';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HttpClientModule } from '@angular/common/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,10 +28,10 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { NotebookListComponent } from './notebook-list/notebook-list.component'
-import { HttpClient } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { ProfileDialogComponent } from './profile-dialog/profile-dialog.component';
+import { environment } from '../environments/environment';
+
 
 
 @NgModule({
@@ -41,12 +43,14 @@ import { ProfileDialogComponent } from './profile-dialog/profile-dialog.componen
     FileUploadComponent,
     FooterComponent,
     SidenavComponent,
-    ProfileDialogComponent
+
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CommonModule,
     MatInputModule,
     MatButtonModule,
     MatCardModule,
@@ -59,12 +63,18 @@ import { ProfileDialogComponent } from './profile-dialog/profile-dialog.componen
     FormsModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule.forRoot({
+      domain: environment.auth.domain,
+      clientId:  environment.auth.clientId,
+      authorizationParams: {
+        redirect_uri: window.location.origin,
+        audience: environment.auth.audience,  // This can be used to request specific resources
+        scope: 'openid profile email'  // Set scopes as needed
+      }
+    })
   ],
-  providers: [
-    provideClientHydration(),
-    provideAnimationsAsync()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

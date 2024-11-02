@@ -7,7 +7,7 @@
     width: 100vw; /* Take full width of the parent */
     /* margin: 0 auto; */
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box; Ensure padding is included in the width
+    box-sizing: border-box; /* Ensure padding is included in the width */
   }
   
   /* File input button (styled for full width) */

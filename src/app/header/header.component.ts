@@ -1,4 +1,6 @@
 import { Component,  Output, EventEmitter } from '@angular/core';
+import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,8 +9,10 @@ import { Component,  Output, EventEmitter } from '@angular/core';
 })
 export class HeaderComponent {
   opened = false;
+
   @Output() openedChange = new EventEmitter<boolean>();
-  
+  constructor(private authService: AuthService) {}
+
 
   onMenuClick() {
     console.log('Menu clicked');
@@ -23,7 +27,13 @@ export class HeaderComponent {
   toggleOpened() {
     this.opened = !this.opened;
     this.openedChange.emit(this.opened);
-    console.log('from header', this.opened)
+    // console.log('from header', this.opened)
+  }
+
+
+  login() {
+    const token = this.authService.login();
+    // Use the token as needed in your component
   }
 
 

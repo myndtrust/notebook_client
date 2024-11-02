@@ -30,6 +30,7 @@ export class NotebookListComponent implements OnInit {
   }
 
   public getNotebooks() {
+    // console.log('getNotebooks');
     this.notebooks$ = this.apiService.getNotebooks();
   }
 
